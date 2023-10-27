@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Timão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="logoNome">Loja Timão</h1>
+                <div id="buscar">
+                    <input type="text" id="buscar-input" placeholder="Pesquisar produto" oninput="buscarProduto()">
+                    <button onclick="buscarSite()">Buscar</button>
+                </div>
+                <div id="carrinho-icon" onclick="toggleCarrinho()">
+                    <img src="img/sacola.png" alt="sacola">
+                </div>
+                <span id="cont-carrinho">0</span>
+            </div>
+            <div id="carrinho-itens">
+                <ul id="itens-lista"></ul>
+                <span id="preco-total">Total: R$0,00</span>
+                <button class="limpa" onclick="limparCarrinho()">Limpar carrinho</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <div class="nome">
+                <h2 class="nome-secao">Meus Produtos:</h2>
+            </div>
+            <div class="produtos">
+                <div class="produto-linha">
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/camisaBrancaI.jpg" alt="camisa do corinthians branca">
+                        </div>
+                        <div class="infos">
+                            <h3>Camisa do Corinthians Branca I</h3>
+                            <p>R$170,00</p>
+                            <button onclick="addCarrinho('Camisa do Corinthians Branca I', 170.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/camisaPretaII.jpg" alt="camisa do corinthians preta">
+                        </div>
+                        <div class="infos">
+                            <h3>Camisa do Corinthians Preta II</h3>
+                            <p>R$115,00</p>
+                            <button onclick="addCarrinho('Camisa do Corinthians Preta II', 115.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/camisaDemocracia.jpg" alt="camisa do corinthians branca">
+                        </div>
+                        <div class="infos">
+                            <h3>Camisa do Corinthians Democracia</h3>
+                            <p>R$160,00</p>
+                            <button onclick="addCarrinho('Camisa do Corinthians Democracia', 160.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="produto-linha">
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/camisaTreino.jpg" alt="camisa do corinthians preta">
+                        </div>
+                        <div class="infos">
+                            <h3>Camisa do Corinthians Treino</h3>
+                            <p>R$109,99</p>
+                            <button onclick="addCarrinho('Camisa do Corinthians Treino', 109.99)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/camisaJapão.jpg" alt="camisa do corinthians branca">
+                        </div>
+                        <div class="infos">
+                            <h3>Camisa do Corinthians Japão</h3>
+                            <p>R$49,80</p>
+                            <button onclick="addCarrinho('Camisa do Corinthians Japão', 149.80)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/camisaF.jpg" alt="camisa do corinthians branca">
+                        </div>
+                        <div class="infos">
+                            <h3>Camisa do Corinthians II 2022</h3>
+                            <p>R$120,00</p>
+                            <button onclick="addCarrinho('Camisa do Corinthians II 2022', 120.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
