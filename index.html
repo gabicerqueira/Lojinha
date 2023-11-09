@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Timão</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/65d3d9eac0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="header">
         <div class="container">
             <div class="logo">
-                <h1 class="logoNome">Loja Timão</h1>
-                <div id="buscar">
-                    <input type="text" id="buscar-input" placeholder="Pesquisar produto" oninput="buscarProduto()">
-                    <button onclick="buscarSite()">Buscar</button>
-                </div>
-                <div id="carrinho-icon" onclick="toggleCarrinho()">
-                    <img src="img/sacola.png" alt="sacola">
+                <img src="img/logo.jpg" alt="logo">
+                <h1 class="logo-nome">Loja Timão</h1>
+            </div>
+            <div id="buscar">
+                <input type="text" id="buscar-input" placeholder="Pesquisar Produto" oninput="buscarProduto()">
+                <button onclick="buscarSite()"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+            </div>
+            <div id="carrinho-icon" onclick="toggleCarrinho()">
+                <div class="imagem">
+                    <img src="img/sacola.png" alt="">
                 </div>
                 <span id="cont-carrinho">0</span>
             </div>
             <div id="carrinho-itens">
                 <ul id="itens-lista"></ul>
-                <span id="preco-total">Total: R$0,00</span>
-                <button class="limpa" onclick="limparCarrinho()">Limpar carrinho</button>
+                <span id="preco-total">Total: R$0.00</span>
+                <button class="limpa" onclick="limparCarrinho()">Limpar Carrinho</button>
             </div>
         </div>
     </header>
